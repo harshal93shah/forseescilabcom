@@ -24,17 +24,17 @@ function [y] = HadamardCode(len,index,opsamples)
     //check conditions on length
     k=log2(len);
     if (~isreal(len) | length(len)~=1 | isnan(len)|len<=0|ceil(k)~=k ) then
-        error("BarkerCode:improper length");
+        error("HadamardCode:improper length");
     end
 
     //check condition on index
     if (~isreal(index) | length(index)~=1 | isnan(index)|ceil(index)~=index|index<0|index>(len-1)) then
-        error("BarkerCode:improper index");
+        error("HadamardCode:improper index");
     end
 
     //check condition on opsamples
     if (~isreal(opsamples) | length(opsamples)~=1 | isnan(opsamples)|ceil(opsamples)~=opsamples|opsamples<=0) then
-        error("BarkerCode:improper output samples");
+        error("HadamardCode:improper output samples");
     end
 
     H= [1 1; 1 -1];
