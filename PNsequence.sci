@@ -26,7 +26,7 @@ function [y,currstate] = PNsequence(genpoly,initialstate,opmask,nbitsout)
     if(~isreal(genpoly) | or( isnan(genpoly)) | min(size(genpoly))~=1 | or(genpoly ~= 0 & genpoly ~= 1)) then
         error("PNsequence:improper genpoly");
     end
-    if(~genpoly(length(1))) then
+    if(~genpoly(1)) then
          error("PNsequence:improper genpoly");
     end
   
