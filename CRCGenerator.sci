@@ -32,7 +32,7 @@ function [y] = CRCGenerator(in,polynomial,initialstate,chksumsperframe)
         error("CRCGenerator:improper genpoly");
     end
     if((~polynomial(1)) |(~polynomial(length(polynomial))) ) then
-         error("PNsequence:improper genpoly");
+         error("CRCGenerator:improper genpoly");
     end
     //checking conditions on initial state
     if(~isreal(initialstate) | or( isnan(initialstate)) | min(size(initialstate))~=1 | or(initialstate ~= 0 & initialstate ~= 1)) then
