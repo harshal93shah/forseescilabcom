@@ -51,7 +51,7 @@ function [y] = CRCGenerator(in,polynomial,initialstate,chksumsperframe)
 
     //checking that length of Initialstate is equal to degree of genpoly
     if (length(polynomial)~=(length(initialstate)+1) ) then
-        error(" length of Initialstate  should be equal to degree of gen poly");
+        error(" CRCGenerator:length of Initialstate  should be equal to degree of gen poly");
     end
     
     //correcting orentation
