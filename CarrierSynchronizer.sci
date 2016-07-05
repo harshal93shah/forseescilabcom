@@ -26,27 +26,27 @@ function [y,p] = CarrierSynchronizer(in,mod,phoff,sps,tav,nb)
     
      //checking conditions on in
     if( or( isnan(in)) | min(size(in))~=1) then
-        error("RaisedCosinerxfilter:improper input");
+        error("CarrierSynchronizer:improper input");
     end
     
      //   checking conditions on Phase offset
     if (~isreal(phoff) | length(phoff)~=1 | isnan(phoff)) then
-        error("RaisedCosinetxfilter:improper Phase offset");
+        error("CarrierSynchronizer:improper Phase offset");
     end
     
      //checking condition on samples per symbol
     if (~isreal(sps) | length(sps)~=1 | isnan(sps)|ceil(sps)~=sps|sps<=0) then
-        error("RaisedCosinetxfilter:improper  samples per symbol");
+        error("CarrierSynchronizer:improper  samples per symbol");
     end
     
      //checking condition on Damping factor
     if (~isreal(tav) | length(tav)~=1 | isnan(tav)|tav<=0) then
-        error("RaisedCosinetxfilter:improper  Damping factor");
+        error("CarrierSynchronizer:improper  Damping factor");
     end
     
      //checking condition on NormalizedLoopBandwidth
     if (~isreal(nb) | length(nb)~=1 | isnan(nb)|nb>1|nb<=0) then
-        error("RaisedCosinetxfilter:improper  NormalizedLoopBandwidthl");
+        error("CarrierSynchronizer:improper  NormalizedLoopBandwidthl");
     end
 
     if(~strcmp(mod,'QAM') | ~strcmp(mod,'BPSK') | ~strcmp(mod,'PAM')) then
@@ -56,7 +56,7 @@ function [y,p] = CarrierSynchronizer(in,mod,phoff,sps,tav,nb)
     elseif(~strcmp(mod,'8PSK'))  then
         x = in*exp(%i*(%pi/8-phoff));
     else
-        error("RaisedCosinetxfilter:Invalid Modulation type")
+        error("CarrierSynchronizer:Invalid Modulation type")
     end
 
     len = length(in);
