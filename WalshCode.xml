@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!--
+ *
+ * This help file was generated from WalshCode.sci using help_from_sci().
+ *
+ -->
+
+<refentry version="5.0-subset Scilab" xml:id="WalshCode" xml:lang="en"
+          xmlns="http://docbook.org/ns/docbook"
+          xmlns:xlink="http://www.w3.org/1999/xlink"
+          xmlns:svg="http://www.w3.org/2000/svg"
+          xmlns:ns3="http://www.w3.org/1999/xhtml"
+          xmlns:mml="http://www.w3.org/1998/Math/MathML"
+          xmlns:scilab="http://www.scilab.org"
+          xmlns:db="http://docbook.org/ns/docbook">
+
+  <refnamediv>
+    <refname>WalshCode</refname>
+    <refpurpose>This fn outputs a frame of the Walsh code in column vector Y</refpurpose>
+  </refnamediv>
+
+
+<refsynopsisdiv>
+   <title>Calling Sequence</title>
+   <synopsis>
+   Y = WalshCode(len,opsamples)
+   </synopsis>
+</refsynopsisdiv>
+
+<refsection>
+   <title>Parameters</title>
+   <variablelist>
+   <varlistentry><term>len:</term>
+      <listitem><para>length of generated code Specify the length of the generated code as a numeric, integer scalar value with a power of two</para></listitem></varlistentry>
+   <varlistentry><term>index :</term>
+      <listitem><para>the number of zero crossings in the generated code equals the value of the specified index/Specify the index of the Hadamard matrix as a numeric, integer scalar value in the range [0, 1, ... , N-1]. N is the value of the Length property</para></listitem></varlistentry>
+   <varlistentry><term>opsamples:</term>
+      <listitem><para>Number of output samples per frame.It shoud be numeric positive scalar value</para></listitem></varlistentry>
+   </variablelist>
+</refsection>
+
+<refsection>
+   <title>Authors</title>
+   <simplelist type="vert">
+   <member>Harshal Shah</member>
+   </simplelist>
+</refsection>
+</refentry>

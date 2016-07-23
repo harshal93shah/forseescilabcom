@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!--
+ *
+ * This help file was generated from AlgebraicDeinterleaver.sci using help_from_sci().
+ *
+ -->
+
+<refentry version="5.0-subset Scilab" xml:id="AlgebraicDeinterleaver" xml:lang="en"
+          xmlns="http://docbook.org/ns/docbook"
+          xmlns:xlink="http://www.w3.org/1999/xlink"
+          xmlns:svg="http://www.w3.org/2000/svg"
+          xmlns:ns3="http://www.w3.org/1999/xhtml"
+          xmlns:mml="http://www.w3.org/1998/Math/MathML"
+          xmlns:scilab="http://www.scilab.org"
+          xmlns:db="http://docbook.org/ns/docbook">
+
+  <refnamediv>
+    <refname>AlgebraicDeinterleaver</refname>
+    <refpurpose>This function restores the original ordering of a sequence that was interleaved</refpurpose>
+  </refnamediv>
+
+
+<refsynopsisdiv>
+   <title>Calling Sequence</title>
+   <synopsis>
+   Y = AlgebraicDeinterleaver(in,'taco',len,MF,CS)
+   Y = AlgebraicDeinterleaver(in,'weco',len,PE)
+   </synopsis>
+</refsynopsisdiv>
+
+<refsection>
+   <title>Parameters</title>
+   <variablelist>
+   <varlistentry><term>in:</term>
+      <listitem><para>input -  The input must be a  vector in the range [0, N–1].</para></listitem></varlistentry>
+   <varlistentry><term>len:</term>
+      <listitem><para> Length-Number of elements in input vector.Specify the number of elements in the input as a positive, integer, scalar.the value of (N+1) must be a prime number, where N is Length  for Welch-Costas method</para></listitem></varlistentry>
+   <varlistentry><term>meth:</term>
+      <listitem><para>Takeshita-Costello method or Welch-Costas method</para></listitem></varlistentry>
+   <varlistentry><term>MF:</term>
+      <listitem><para>-specify the factor the object uses to compute the cycle vector for the interleaver as a positive, integer, scalar.</para></listitem></varlistentry>
+   <varlistentry><term>CS:</term>
+      <listitem><para>CyclicShift-specify the amount by which the object shifts indices, when it creates the final permutation vector, as a nonnegative, integer, scalar</para></listitem></varlistentry>
+   <varlistentry><term>PF:</term>
+      <listitem><para>PrimitiveElement- You must set the PrimitiveElement property to an integer,  between 1 and N.This integer represents a primitive element of the finite field GF(N+1).</para></listitem></varlistentry>
+   </variablelist>
+</refsection>
+
+<refsection>
+   <title>Description</title>
+   <para>
+The algebraic deinterleaver performs all computations in modulo N, where N is the length
+</para>
+</refsection>
+
+<refsection>
+   <title>Authors</title>
+   <simplelist type="vert">
+   <member>Harshal Shah</member>
+   </simplelist>
+</refsection>
+</refentry>

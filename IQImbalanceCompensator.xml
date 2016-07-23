@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!--
+ *
+ * This help file was generated from IQImbalanceCompensator.sci using help_from_sci().
+ *
+ -->
+
+<refentry version="5.0-subset Scilab" xml:id="IQImbalanceCompensator" xml:lang="en"
+          xmlns="http://docbook.org/ns/docbook"
+          xmlns:xlink="http://www.w3.org/1999/xlink"
+          xmlns:svg="http://www.w3.org/2000/svg"
+          xmlns:ns3="http://www.w3.org/1999/xhtml"
+          xmlns:mml="http://www.w3.org/1998/Math/MathML"
+          xmlns:scilab="http://www.scilab.org"
+          xmlns:db="http://docbook.org/ns/docbook">
+
+  <refnamediv>
+    <refname>IQImbalanceCompensator</refname>
+    <refpurpose>This fn compensates for I/Q imbalance and also outputs the estimated coefficients, ESTCOEF The adaptive algorithm inherent to the I/Q imbalance compensator is compatible with M-PSK, M-QAM, and OFDM modulation schemes, where M>2.</refpurpose>
+  </refnamediv>
+
+
+<refsynopsisdiv>
+   <title>Calling Sequence</title>
+   <synopsis>
+   [y,estcoef] = IQImbalanceCompensator(in,ic,ss)
+   </synopsis>
+</refsynopsisdiv>
+
+<refsection>
+   <title>Parameters</title>
+   <variablelist>
+   <varlistentry><term>in:</term>
+      <listitem><para>input-Input vector signal can be complex</para></listitem></varlistentry>
+   <varlistentry><term>ss:</term>
+      <listitem><para>Adaptation step size Specifies the step size used by the algorithm in estimating the I/Q imbalance</para></listitem></varlistentry>
+   </variablelist>
+</refsection>
+
+<refsection>
+   <title>Authors</title>
+   <simplelist type="vert">
+   <member>Harshal Shah</member>
+   </simplelist>
+</refsection>
+</refentry>

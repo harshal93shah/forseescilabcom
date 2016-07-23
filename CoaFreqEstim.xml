@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!--
+ *
+ * This help file was generated from CoaFreqEstim.sci using help_from_sci().
+ *
+ -->
+
+<refentry version="5.0-subset Scilab" xml:id="CoaFreqEstim" xml:lang="en"
+          xmlns="http://docbook.org/ns/docbook"
+          xmlns:xlink="http://www.w3.org/1999/xlink"
+          xmlns:svg="http://www.w3.org/2000/svg"
+          xmlns:ns3="http://www.w3.org/1999/xhtml"
+          xmlns:mml="http://www.w3.org/1998/Math/MathML"
+          xmlns:scilab="http://www.scilab.org"
+          xmlns:db="http://docbook.org/ns/docbook">
+
+  <refnamediv>
+    <refname>CoaFreqEstim</refname>
+    <refpurpose>This function estimates frequency offset using fft based algorithm or correleation based algo for mod of BPSK,QPSK,PSK,PAM and QAM</refpurpose>
+  </refnamediv>
+
+
+<refsynopsisdiv>
+   <title>Calling Sequence</title>
+   <synopsis>
+   CoaFreqEstim(in,mod,'fft',fs,fr)
+   CoaFreqEstim(in,m,'corr',fs,fm)
+   </synopsis>
+</refsynopsisdiv>
+
+<refsection>
+   <title>Parameters</title>
+   <variablelist>
+   <varlistentry><term>in:</term>
+      <listitem><para>input-Input vector signal can be complex</para></listitem></varlistentry>
+   <varlistentry><term>m:</term>
+      <listitem><para>ModulationOrder-Modulation order the object uses.Specify the modulation order of the PSK signal as a positive, real scalar</para></listitem></varlistentry>
+   <varlistentry><term>fs:</term>
+      <listitem><para>Sample rate (Hz)-specify the sample rate in samples per second as a positive, real scalar</para></listitem></varlistentry>
+   <varlistentry><term>fr:</term>
+      <listitem><para>Frequency resolution (Hz) -Specify the frequency resolution for the offset frequency estimation as a positive, real scalar.The value for this property must be less than or equal to half the SampleRate</para></listitem></varlistentry>
+   <varlistentry><term>fm:</term>
+      <listitem><para>Maximum measurable frequency offset (Hz) Specify the maximum measurable frequency offset as a positive, real scalar.The value of this property must be less than SampleRate/ ModulationOrder</para></listitem></varlistentry>
+   </variablelist>
+</refsection>
+
+<refsection>
+   <title>Authors</title>
+   <simplelist type="vert">
+   <member>Harshal Shah</member>
+   </simplelist>
+</refsection>
+</refentry>

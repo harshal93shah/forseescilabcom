@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!--
+ *
+ * This help file was generated from RaisedCosinerxfilter.sci using help_from_sci().
+ *
+ -->
+
+<refentry version="5.0-subset Scilab" xml:id="RaisedCosinerxfilter" xml:lang="en"
+          xmlns="http://docbook.org/ns/docbook"
+          xmlns:xlink="http://www.w3.org/1999/xlink"
+          xmlns:svg="http://www.w3.org/2000/svg"
+          xmlns:ns3="http://www.w3.org/1999/xhtml"
+          xmlns:mml="http://www.w3.org/1998/Math/MathML"
+          xmlns:scilab="http://www.scilab.org"
+          xmlns:db="http://docbook.org/ns/docbook">
+
+  <refnamediv>
+    <refname>RaisedCosinerxfilter</refname>
+    <refpurpose>This fn apply pulse shaping by decimating input signal using raised cosine filter</refpurpose>
+  </refnamediv>
+
+
+<refsynopsisdiv>
+   <title>Calling Sequence</title>
+   <synopsis>
+   Y = RaisedCosinerxfilter(in,bet,span,sps)
+   Y= RaisedCosinerxfilter(in,bet,span,sps,shape)
+   Y= RaisedCosinerxfilter(in,bet,span,sps,shape,decfac)
+   Y= RaisedCosinerxfilter(in,bet,span,sps,shape,decfac,decoff)
+   Y= RaisedCosinerxfilter(in,bet,span,sps,shape,decfac,decoff,gain)
+   </synopsis>
+</refsynopsisdiv>
+
+<refsection>
+   <title>Parameters</title>
+   <variablelist>
+   <varlistentry><term>in:</term>
+      <listitem><para> input  -can be any vector</para></listitem></varlistentry>
+   <varlistentry><term>bet:</term>
+      <listitem><para>RolloffFactor - Specify the rolloff factor as a scalar between 0 and 1.</para></listitem></varlistentry>
+   <varlistentry><term>span:</term>
+      <listitem><para>FilterSpanInSymbols-Specify the number of symbols the filter spans as an integer-valued, positive scalar</para></listitem></varlistentry>
+   <varlistentry><term>sps:</term>
+      <listitem><para>Input samples per symbol - Specify the number of Input samples for each symbol. This property accepts an integer-valued, positive scalar value. The raised cosine filter has (FilterSpanInSymbols x OutputSamplesPerSymbol + 1) taps.</para></listitem></varlistentry>
+   <varlistentry><term>shape:</term>
+      <listitem><para>Filter shape -  Specify the filter shape as one of 'normal' or 'squareroot'.The default is Square root.</para></listitem></varlistentry>
+   <varlistentry><term>decfac :</term>
+      <listitem><para> Decimation factor - Specify the factor by which the object reduces the sampling rate of the input signal.Default value is equal to sps. This property accepts a positive integer scalar value between 1 and InputSamplesPerSymbol. The value must evenly divide into InputSamplesPerSymbol</para></listitem></varlistentry>
+   <varlistentry><term>decoff:</term>
+      <listitem><para>DecimationOffset - Specify the number of filtered samples the System object discards before downsampling.The default is 0. This property accepts an integer valued scalar between 0 and DecimationFactor − 1.</para></listitem></varlistentry>
+   <varlistentry><term>gain:</term>
+      <listitem><para>Linear filter gain-Specify the linear gain of the filter as a positive numeric scalar. The default is 1.he object designs a raised cosine filter that has unit energy, and then applies the linear gain to obtain final tap values.</para></listitem></varlistentry>
+   </variablelist>
+</refsection>
+
+<refsection>
+   <title>Authors</title>
+   <simplelist type="vert">
+   <member>Harshal Shah</member>
+   </simplelist>
+</refsection>
+</refentry>

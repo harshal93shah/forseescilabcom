@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!--
+ *
+ * This help file was generated from ConvolutionaDeinterleaver.sci using help_from_sci().
+ *
+ -->
+
+<refentry version="5.0-subset Scilab" xml:id="ConvolutionaDeinterleaver" xml:lang="en"
+          xmlns="http://docbook.org/ns/docbook"
+          xmlns:xlink="http://www.w3.org/1999/xlink"
+          xmlns:svg="http://www.w3.org/2000/svg"
+          xmlns:ns3="http://www.w3.org/1999/xhtml"
+          xmlns:mml="http://www.w3.org/1998/Math/MathML"
+          xmlns:scilab="http://www.scilab.org"
+          xmlns:db="http://docbook.org/ns/docbook">
+
+  <refnamediv>
+    <refname>ConvolutionaDeinterleaver</refname>
+    <refpurpose></refpurpose>
+  </refnamediv>
+
+
+<refsynopsisdiv>
+   <title>Calling Sequence</title>
+   <synopsis>
+   [y,state,index] = ConvolutionalDeinterleaver(in,delay,inist)
+   </synopsis>
+</refsynopsisdiv>
+
+<refsection>
+   <title>Parameters</title>
+   <variablelist>
+   <varlistentry><term>in:</term>
+      <listitem><para>input- can be any scalar vector</para></listitem></varlistentry>
+   <varlistentry><term>nrows:</term>
+      <listitem><para>number of rows- no of shift register present</para></listitem></varlistentry>
+   <varlistentry><term>slope:</term>
+      <listitem><para> The number of additional symbols that fit in each successive shift register, where the first register holds zero symbols.</para></listitem></varlistentry>
+   <varlistentry><term>inist:</term>
+      <listitem><para>Initialstate- Initial conditions of shift registers.Specify the initial values in each shift register as a numeric scalar value or a matrix. . When you set this property to a matrix, the size should be equal to no of shiftregister * max delay r. This matric contains initial conditions,Here the orignal delay elements are for ith element is max(delay)-delay where the (i,j)is of jth element of i-th shift register.the irrelevant element doesn't matter. for eg nrow=2, slope =2  matrix with (2,1) and (2,2) elements irrelevant</para></listitem></varlistentry>
+   <varlistentry><term>stindex:</term>
+      <listitem><para>start index- which shift register will give first ouput. it should be scalar less than no of shift register</para></listitem></varlistentry>
+   </variablelist>
+</refsection>
+
+<refsection>
+   <title>Authors</title>
+   <simplelist type="vert">
+   <member>Harshal Shah</member>
+   </simplelist>
+</refsection>
+</refentry>

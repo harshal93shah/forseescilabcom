@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!--
+ *
+ * This help file was generated from RaisedCosinetxfilter.sci using help_from_sci().
+ *
+ -->
+
+<refentry version="5.0-subset Scilab" xml:id="RaisedCosinetxfilter" xml:lang="en"
+          xmlns="http://docbook.org/ns/docbook"
+          xmlns:xlink="http://www.w3.org/1999/xlink"
+          xmlns:svg="http://www.w3.org/2000/svg"
+          xmlns:ns3="http://www.w3.org/1999/xhtml"
+          xmlns:mml="http://www.w3.org/1998/Math/MathML"
+          xmlns:scilab="http://www.scilab.org"
+          xmlns:db="http://docbook.org/ns/docbook">
+
+  <refnamediv>
+    <refname>RaisedCosinetxfilter</refname>
+    <refpurpose>this fn apply pulse shaping by upsampling signal using raised cosine filter</refpurpose>
+  </refnamediv>
+
+
+<refsynopsisdiv>
+   <title>Calling Sequence</title>
+   <synopsis>
+   Y = RaisedCosinetxfilter(in,bet,span,sps)
+   Y= RaisedCosinetxfilter(in,bet,span,shape)
+   Y= RaisedCosinetxfilter(in,bet,span,shape,gain)
+   </synopsis>
+</refsynopsisdiv>
+
+<refsection>
+   <title>Parameters</title>
+   <variablelist>
+   <varlistentry><term>in:</term>
+      <listitem><para> input  -can be any vector</para></listitem></varlistentry>
+   <varlistentry><term>bet:</term>
+      <listitem><para>RolloffFactor - Specify the rolloff factor as a scalar between 0 and 1.</para></listitem></varlistentry>
+   <varlistentry><term>span:</term>
+      <listitem><para>FilterSpanInSymbols-Specify the number of symbols the filter spans as an integer-valued, positive scalar</para></listitem></varlistentry>
+   <varlistentry><term>sps:</term>
+      <listitem><para>Input samples per symbol - Specify the number of Input samples for each symbol. This property accepts an integer-valued, positive scalar value. The raised cosine filter has (FilterSpanInSymbols x OutputSamplesPerSymbol + 1) taps.</para></listitem></varlistentry>
+   <varlistentry><term>shape:</term>
+      <listitem><para>Filter shape -  Specify the filter shape as one of 'normal' or 'squareroot'.The default is Square root.</para></listitem></varlistentry>
+   <varlistentry><term>gain:</term>
+      <listitem><para>Linear filter gain-Specify the linear gain of the filter as a positive numeric scalar. The default is 1.he object designs a raised cosine filter that has unit energy, and then applies the linear gain to obtain final tap values.</para></listitem></varlistentry>
+   </variablelist>
+</refsection>
+
+<refsection>
+   <title>Authors</title>
+   <simplelist type="vert">
+   <member>Harshal Shah</member>
+   </simplelist>
+</refsection>
+</refentry>

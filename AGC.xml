@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!--
+ *
+ * This help file was generated from AGC.sci using help_from_sci().
+ *
+ -->
+
+<refentry version="5.0-subset Scilab" xml:id="AGC" xml:lang="en"
+          xmlns="http://docbook.org/ns/docbook"
+          xmlns:xlink="http://www.w3.org/1999/xlink"
+          xmlns:svg="http://www.w3.org/2000/svg"
+          xmlns:ns3="http://www.w3.org/1999/xhtml"
+          xmlns:mml="http://www.w3.org/1998/Math/MathML"
+          xmlns:scilab="http://www.scilab.org"
+          xmlns:db="http://docbook.org/ns/docbook">
+
+  <refnamediv>
+    <refname>AGC</refname>
+    <refpurpose>This function adaptively adjust gain for constant signal-level output</refpurpose>
+  </refnamediv>
+
+
+<refsynopsisdiv>
+   <title>Calling Sequence</title>
+   <synopsis>
+   [y] = AGC(x,K,A,N,maxpow)
+   </synopsis>
+</refsynopsisdiv>
+
+<refsection>
+   <title>Parameters</title>
+   <variablelist>
+   <varlistentry><term>x:</term>
+      <listitem><para>Input-Input vector signal</para></listitem></varlistentry>
+   <varlistentry><term>k:</term>
+      <listitem><para>AdaptationStepSize-Step size for gain updates.Specify the step size as a real positive scalar.</para></listitem></varlistentry>
+   <varlistentry><term>A:</term>
+      <listitem><para>DesiredOutputPower-Target output power level.Specify the desired output power level as a real positive scalar.</para></listitem></varlistentry>
+   <varlistentry><term>N:</term>
+      <listitem><para>AveragingLength-Length of the averaging window.Specify the length of the averaging window in samples as a positive integer scalar.</para></listitem></varlistentry>
+   <varlistentry><term>maxpow:</term>
+      <listitem><para>MaxPowerGain-Maximum power gain in decibels.Specify the maximum gain of the AGC in decibels as a positive scalar.</para></listitem></varlistentry>
+   </variablelist>
+</refsection>
+
+<refsection>
+   <title>Authors</title>
+   <simplelist type="vert">
+   <member>Harshal Shah</member>
+   </simplelist>
+</refsection>
+</refentry>

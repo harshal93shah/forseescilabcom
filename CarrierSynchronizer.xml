@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!--
+ *
+ * This help file was generated from CarrierSynchronizer.sci using help_from_sci().
+ *
+ -->
+
+<refentry version="5.0-subset Scilab" xml:id="CarrierSynchronizer" xml:lang="en"
+          xmlns="http://docbook.org/ns/docbook"
+          xmlns:xlink="http://www.w3.org/1999/xlink"
+          xmlns:svg="http://www.w3.org/2000/svg"
+          xmlns:ns3="http://www.w3.org/1999/xhtml"
+          xmlns:mml="http://www.w3.org/1998/Math/MathML"
+          xmlns:scilab="http://www.scilab.org"
+          xmlns:db="http://docbook.org/ns/docbook">
+
+  <refnamediv>
+    <refname>CarrierSynchronizer</refname>
+    <refpurpose>This function compensate for carrier frequency offsets and returns a compensated signal, Y, and an estimate of the phase error, P, in radians.</refpurpose>
+  </refnamediv>
+
+
+<refsynopsisdiv>
+   <title>Calling Sequence</title>
+   <synopsis>
+   [y,p] = CarrierSynchronizer(in,mod,phoff,sps,damfac,nlb)
+   </synopsis>
+</refsynopsisdiv>
+
+<refsection>
+   <title>Parameters</title>
+   <variablelist>
+   <varlistentry><term>in:</term>
+      <listitem><para>input-Input vector signal can be complex</para></listitem></varlistentry>
+   <varlistentry><term>mod:</term>
+      <listitem><para>Modulation type size for gain updates.Specify the modulation type as BPSK, QPSK, 8PSK, QAM, or PAM.</para></listitem></varlistentry>
+   <varlistentry><term>phoff:</term>
+      <listitem><para>Phase offset:Specify the phase offset in radians as a real scalar</para></listitem></varlistentry>
+   <varlistentry><term>sps:</term>
+      <listitem><para>SamplesPerSymbol Specify the number of samples per symbol as a positive integer scalar.</para></listitem></varlistentry>
+   <varlistentry><term>tav:</term>
+      <listitem><para>Damping factor of the loop filter power gain in decibels.Specify the damping factor of the loop filter as a positive real finite scalar.</para></listitem></varlistentry>
+   <varlistentry><term>nb:</term>
+      <listitem><para>NormalizedLoopBandwidth-Normalized bandwidth of the loop filter.Specify the normalized loop bandwidth as a real scalar between 0 and 1. The loop bandwidth is normalized by the sample rate of the synchronizer.</para></listitem></varlistentry>
+   </variablelist>
+</refsection>
+
+<refsection>
+   <title>Authors</title>
+   <simplelist type="vert">
+   <member>Harshal Shah</member>
+   </simplelist>
+</refsection>
+</refentry>

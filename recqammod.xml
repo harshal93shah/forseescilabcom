@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!--
+ *
+ * This help file was generated from recqammod.sci using help_from_sci().
+ *
+ -->
+
+<refentry version="5.0-subset Scilab" xml:id="recqammod" xml:lang="en"
+          xmlns="http://docbook.org/ns/docbook"
+          xmlns:xlink="http://www.w3.org/1999/xlink"
+          xmlns:svg="http://www.w3.org/2000/svg"
+          xmlns:ns3="http://www.w3.org/1999/xhtml"
+          xmlns:mml="http://www.w3.org/1998/Math/MathML"
+          xmlns:scilab="http://www.scilab.org"
+          xmlns:db="http://docbook.org/ns/docbook">
+
+  <refnamediv>
+    <refname>recqammod</refname>
+    <refpurpose>This fn  outputs the complex envelope of the QAM modulation of the input signal with rectangular</refpurpose>
+  </refnamediv>
+
+
+<refsynopsisdiv>
+   <title>Calling Sequence</title>
+   <synopsis>
+   Y = RECQAMMOD(X,M)
+   Y = RECQAMMOD(X,M,INI_PHASE)
+   Y = RECQAMMOD(X,M,INI_PHASE,SYMBOL_ORDER)
+   </synopsis>
+</refsynopsisdiv>
+
+<refsection>
+   <title>Parameters</title>
+   <variablelist>
+   <varlistentry><term>X:</term>
+      <listitem><para>message signal X  .The message signal must consist of integers between 0 and M-1</para></listitem></varlistentry>
+   <varlistentry><term>M:</term>
+      <listitem><para> modulation order. It must be an integer power of two.</para></listitem></varlistentry>
+   <varlistentry><term>INI_PHASE:</term>
+      <listitem><para> specifies a phase offset (rad).</para></listitem></varlistentry>
+   <varlistentry><term>SYMBOL_ORDER:</term>
+      <listitem><para> specifies how the function assigns binary words to corresponding integers. If SYMBOL_ORDER is set to 'bin'(default), then the function uses a natural binary-coded ordering. If SYMBOL_ORDER is set to 'gray', then the function uses a Gray-coded ordering.</para></listitem></varlistentry>
+   </variablelist>
+</refsection>
+
+<refsection>
+   <title>Authors</title>
+   <simplelist type="vert">
+   <member>Harshal Shah</member>
+   </simplelist>
+</refsection>
+</refentry>

@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!--
+ *
+ * This help file was generated from PNsequence.sci using help_from_sci().
+ *
+ -->
+
+<refentry version="5.0-subset Scilab" xml:id="PNsequence" xml:lang="en"
+          xmlns="http://docbook.org/ns/docbook"
+          xmlns:xlink="http://www.w3.org/1999/xlink"
+          xmlns:svg="http://www.w3.org/2000/svg"
+          xmlns:ns3="http://www.w3.org/1999/xhtml"
+          xmlns:mml="http://www.w3.org/1998/Math/MathML"
+          xmlns:scilab="http://www.scilab.org"
+          xmlns:db="http://docbook.org/ns/docbook">
+
+  <refnamediv>
+    <refname>PNsequence</refname>
+    <refpurpose>This fn outputs binary pn sequence(column vector) and currstate i.e current state of shift register</refpurpose>
+  </refnamediv>
+
+
+<refsynopsisdiv>
+   <title>Calling Sequence</title>
+   <synopsis>
+   Y = PNsequence(genpoly,initialstate,opmask,nbitsout)
+   </synopsis>
+</refsynopsisdiv>
+
+<refsection>
+   <title>Parameters</title>
+   <variablelist>
+   <varlistentry><term>genpoly:</term>
+      <listitem><para>Generator polynomial is vector array of bits; must be descending order.</para></listitem></varlistentry>
+   <varlistentry><term>Initialstate:</term>
+      <listitem><para>Vector array (with length of the generator polynomial order) of initial shift register values (in bits)</para></listitem></varlistentry>
+   <varlistentry><term>opmask:</term>
+      <listitem><para>Outout mask vector of binary 0 and 1 values is used to specify which shift register state bits are XORed to produce the resulting output bit value.Initialstate and opmask should have same length and should be equal to degree of gen poly</para></listitem></varlistentry>
+   <varlistentry><term>nbitsout:</term>
+      <listitem><para>number of outputbits</para></listitem></varlistentry>
+   </variablelist>
+</refsection>
+
+<refsection>
+   <title>Authors</title>
+   <simplelist type="vert">
+   <member>Harshal Shah</member>
+   </simplelist>
+</refsection>
+</refentry>

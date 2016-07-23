@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!--
+ *
+ * This help file was generated from DiscretetimeVCO.sci using help_from_sci().
+ *
+ -->
+
+<refentry version="5.0-subset Scilab" xml:id="DiscretetimeVCO" xml:lang="en"
+          xmlns="http://docbook.org/ns/docbook"
+          xmlns:xlink="http://www.w3.org/1999/xlink"
+          xmlns:svg="http://www.w3.org/2000/svg"
+          xmlns:ns3="http://www.w3.org/1999/xhtml"
+          xmlns:mml="http://www.w3.org/1998/Math/MathML"
+          xmlns:scilab="http://www.scilab.org"
+          xmlns:db="http://docbook.org/ns/docbook">
+
+  <refnamediv>
+    <refname>DiscretetimeVCO</refname>
+    <refpurpose>This function implements voltage-controlled oscillator in discrete time</refpurpose>
+  </refnamediv>
+
+
+<refsynopsisdiv>
+   <title>Calling Sequence</title>
+   <synopsis>
+   [y] = DiscretetimeVCO(in,Ac,fc,kc,iniph,T)
+   </synopsis>
+</refsynopsisdiv>
+
+<refsection>
+   <title>Parameters</title>
+   <variablelist>
+   <varlistentry><term>in:</term>
+      <listitem><para> input  -can be any vector</para></listitem></varlistentry>
+   <varlistentry><term>Ac:</term>
+      <listitem><para>OutputAmplitude-Specify the amplitude of the output signal as scalar value.</para></listitem></varlistentry>
+   <varlistentry><term>fc:</term>
+      <listitem><para>QuiescentFrequency- Frequency of output signal when input is zero.Specify the quiescent frequency of the output signal in Hertz, , real, scalar value.</para></listitem></varlistentry>
+   <varlistentry><term>kc:</term>
+      <listitem><para>Sensitivity- Sensitivity of frequency shift of output signal.Specify the sensitivity as real, scalar value</para></listitem></varlistentry>
+   <varlistentry><term>iniph:</term>
+      <listitem><para>InitialPhase- Initial phase of output signal. Specify the initial phase of the output signal, in radians, as  real, scalar value</para></listitem></varlistentry>
+   <varlistentry><term>T:</term>
+      <listitem><para>Sampletime -Sample time of input. Specify the sample time of the input, in seconds, as  positive, scalar value</para></listitem></varlistentry>
+   </variablelist>
+</refsection>
+
+<refsection>
+   <title>Authors</title>
+   <simplelist type="vert">
+   <member>Harshal Shah</member>
+   </simplelist>
+</refsection>
+</refentry>

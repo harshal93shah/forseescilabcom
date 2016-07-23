@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!--
+ *
+ * This help file was generated from HelicalInterleaver.sci using help_from_sci().
+ *
+ -->
+
+<refentry version="5.0-subset Scilab" xml:id="HelicalInterleaver" xml:lang="en"
+          xmlns="http://docbook.org/ns/docbook"
+          xmlns:xlink="http://www.w3.org/1999/xlink"
+          xmlns:svg="http://www.w3.org/2000/svg"
+          xmlns:ns3="http://www.w3.org/1999/xhtml"
+          xmlns:mml="http://www.w3.org/1998/Math/MathML"
+          xmlns:scilab="http://www.scilab.org"
+          xmlns:db="http://docbook.org/ns/docbook">
+
+  <refnamediv>
+    <refname>HelicalInterleaver</refname>
+    <refpurpose>This fn rpermutes input data using helical array. It also returns the current state of arrays as matrix and the value of next index from which we would get output</refpurpose>
+  </refnamediv>
+
+
+<refsynopsisdiv>
+   <title>Calling Sequence</title>
+   <synopsis>
+   [y,state,index,state2] = HelicalDeinterleaver(in,col,N,stp,inist,stindex)
+   </synopsis>
+</refsynopsisdiv>
+
+<refsection>
+   <title>Parameters</title>
+   <variablelist>
+   <varlistentry><term>in:</term>
+      <listitem><para>input- can be any  vector. Its length should be equal to col * N</para></listitem></varlistentry>
+   <varlistentry><term>col:</term>
+      <listitem><para>Number of columns-The number of columns, C, in the helical array.</para></listitem></varlistentry>
+   <varlistentry><term>N:</term>
+      <listitem><para>The group size, N, of each group of input symbols.</para></listitem></varlistentry>
+   <varlistentry><term>inist:</term>
+      <listitem><para>Initialstate- Initial conditions of helical array.Specify the initial values in each shift register as a numeric scalar value(in case of 5 args) or a matrix. Intially pass a scalar for subsequent calls pass the state returned  from previous calls</para></listitem></varlistentry>
+   <varlistentry><term>stindex:</term>
+      <listitem><para>start index- which shift register will give first ouput. it should be scalar less than no of col.Intially pass 1 subsequent cause pass the index returned  from previous calls</para></listitem></varlistentry>
+   </variablelist>
+</refsection>
+
+<refsection>
+   <title>Authors</title>
+   <simplelist type="vert">
+   <member>Harshal Shah</member>
+   </simplelist>
+</refsection>
+</refentry>

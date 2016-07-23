@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!--
+ *
+ * This help file was generated from CRCGenerator.sci using help_from_sci().
+ *
+ -->
+
+<refentry version="5.0-subset Scilab" xml:id="CRCGenerator" xml:lang="en"
+          xmlns="http://docbook.org/ns/docbook"
+          xmlns:xlink="http://www.w3.org/1999/xlink"
+          xmlns:svg="http://www.w3.org/2000/svg"
+          xmlns:ns3="http://www.w3.org/1999/xhtml"
+          xmlns:mml="http://www.w3.org/1998/Math/MathML"
+          xmlns:scilab="http://www.scilab.org"
+          xmlns:db="http://docbook.org/ns/docbook">
+
+  <refnamediv>
+    <refname>CRCGenerator</refname>
+    <refpurpose>This function Generate CRC code bits and append to input data</refpurpose>
+  </refnamediv>
+
+
+<refsynopsisdiv>
+   <title>Calling Sequence</title>
+   <synopsis>
+   Y = CRCGenerator(in,polynomial,initialstate,chksumsperframe)
+   </synopsis>
+</refsynopsisdiv>
+
+<refsection>
+   <title>Parameters</title>
+   <variablelist>
+   <varlistentry><term>in:</term>
+      <listitem><para>input -  The input must be a binary vector.</para></listitem></varlistentry>
+   <varlistentry><term>polynomial:</term>
+      <listitem><para> Generator polynomial.Specify the generator polynomial as a binary or integer row vector, with coefficients in descending order of powers</para></listitem></varlistentry>
+   <varlistentry><term>Initialstate:</term>
+      <listitem><para> Vector array (with length of the generator polynomial order)of initial shift register values (in bits)</para></listitem></varlistentry>
+   <varlistentry><term>chksumsperframe:</term>
+      <listitem><para>checksumsperframe. Number of checksums per input frame. Specify the number of checksums that the object calculates for each input frame as a positive integer the integer must divide the length of each input frame evenly.</para></listitem></varlistentry>
+   </variablelist>
+</refsection>
+
+<refsection>
+   <title>Authors</title>
+   <simplelist type="vert">
+   <member>Harshal shah</member>
+   </simplelist>
+</refsection>
+</refentry>

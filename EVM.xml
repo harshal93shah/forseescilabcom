@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!--
+ *
+ * This help file was generated from EVM.sci using help_from_sci().
+ *
+ -->
+
+<refentry version="5.0-subset Scilab" xml:id="EVM" xml:lang="en"
+          xmlns="http://docbook.org/ns/docbook"
+          xmlns:xlink="http://www.w3.org/1999/xlink"
+          xmlns:svg="http://www.w3.org/2000/svg"
+          xmlns:ns3="http://www.w3.org/1999/xhtml"
+          xmlns:mml="http://www.w3.org/1998/Math/MathML"
+          xmlns:scilab="http://www.scilab.org"
+          xmlns:db="http://docbook.org/ns/docbook">
+
+  <refnamediv>
+    <refname>EVM</refname>
+    <refpurpose>This fn measures the error vector magnitude (EVM), which is an indication of modulator or demodulator performance.The block normalizes to the average reference signal power, average constellation power, or peak constellation power. It also outputs 1)rmsEVM -gives root mean square of evm values over N symbols 2)-The maximum EVM - represents the worst-case EVM value per burst 3)Xth percentile -is the EVM value below which X% of all the computed EVM values lie</refpurpose>
+  </refnamediv>
+
+
+<refsynopsisdiv>
+   <title>Calling Sequence</title>
+   <synopsis>
+   [rmsEVM,maxEVM,perEVM] = EVM(rxsg,txsg,'avgrefsigpow',xper) // normalizes w.r.t avg sig power
+   [rmsEVM,maxEVM,perEVM] = EVM(rxsg,txsg,'peakconpow',xper,pcon)//normalizes w.r.t peak constellation power pcon
+   [rmsEVM,maxEVM,perEVM] = EVM(rxsg,txsg,'avgconpow',xper,pcon) //normalizes w.r.t average constellation power pcon
+   </synopsis>
+</refsynopsisdiv>
+
+<refsection>
+   <title>Parameters</title>
+   <variablelist>
+   <varlistentry><term>rxsg:</term>
+      <listitem><para>received signal- A vector</para></listitem></varlistentry>
+   <varlistentry><term>txsg:</term>
+      <listitem><para>transmitted - A vector</para></listitem></varlistentry>
+   <varlistentry><term>xper:</term>
+      <listitem><para>X-percentile value above which X% of the MER measurements fall, specified as a real scalar from 0 to 100</para></listitem></varlistentry>
+   </variablelist>
+</refsection>
+</refentry>
