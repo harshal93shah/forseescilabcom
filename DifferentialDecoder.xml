@@ -39,6 +39,22 @@
 </refsection>
 
 <refsection>
+   <title>Description</title>
+   <para>
+The DifferentialDecoder object decodes the binary input signal. The output is the logical difference between the consecutive input element within a channel.
+</para>
+</refsection>
+
+<refsection>
+   <title>Examples</title>
+   <programlisting role="example"><![CDATA[
+y=DifferentialDecoder([1 1 0 1 0 0 1],0)
+y  =
+1.    0.    0.    1.    1.    1.    0.
+   ]]></programlisting>
+</refsection>
+
+<refsection>
    <title>Authors</title>
    <simplelist type="vert">
    <member>Harshal Shah</member>

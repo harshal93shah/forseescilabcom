@@ -45,6 +45,24 @@
 </refsection>
 
 <refsection>
+   <title>Description</title>
+   <para>
+The Helical Interleaver block permutes the symbols in the input signal by placing them in an array in a helical fashion and then sending rows of the array to the output port.
+The block uses the array internally for its computations. If C is the Number of columns in helical array parameter, then the array has C columns and unlimited rows. If N is the Group size parameter, then the block accepts an input of length C·N at each time step and partitions the input into consecutive groups of N symbols. Counting from the beginning of the simulation, the block places the kth group in the array along column k mod C. The placement is helical because of the reduction modulo C and because the first symbol in the kth group is in row 1+(k-1)· s, where s is the Helical array step size parameter. Positions in the array that do not contain input symbols have default contents specified by the Initial condition parameter.
+The block sends C·N symbols from the array to the output port by reading the next N rows sequentially.
+</para>
+</refsection>
+
+<refsection>
+   <title>Examples</title>
+   <programlisting role="example"><![CDATA[
+y = HelicalInterleaver([1 2 3 4 5 6],3,2,1,0,1)
+y  =
+1.    0.    0.    2.    3.    0.
+   ]]></programlisting>
+</refsection>
+
+<refsection>
    <title>Authors</title>
    <simplelist type="vert">
    <member>Harshal Shah</member>

@@ -35,7 +35,18 @@
       <listitem><para> specify output frame length properties</para></listitem></varlistentry>
    <varlistentry><term>len:</term>
       <listitem><para> specifies length of barker code</para></listitem></varlistentry>
+   <varlistentry><term>Description:</term>
+      <listitem><para>The BarkerCode object generates Barker codes to perform synchronization. Barker codes are subsets of PN sequences. They are short codes, with a length at most 13, which have low-correlation sidelobes. A correlation sidelobe is the correlation of a codeword with a time-shifted version of itself.</para></listitem></varlistentry>
    </variablelist>
+</refsection>
+
+<refsection>
+   <title>Examples</title>
+   <programlisting role="example"><![CDATA[
+y=BarkerCode(4,2)
+y  =
+1.    1.
+   ]]></programlisting>
 </refsection>
 
 <refsection>

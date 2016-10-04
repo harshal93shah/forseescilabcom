@@ -46,6 +46,22 @@
 </refsection>
 
 <refsection>
+   <title>Description</title>
+   <para>
+The CoarseFrequencyCompensator estimates the frequency offset of received signals for PAM, PSK, or QAM
+</para>
+</refsection>
+
+<refsection>
+   <title>Examples</title>
+   <programlisting role="example"><![CDATA[
+y=CoaFreqEstim([1 3 5 2],'QPSK','fft',8000,3000)
+y  =
+500.
+   ]]></programlisting>
+</refsection>
+
+<refsection>
    <title>Authors</title>
    <simplelist type="vert">
    <member>Harshal Shah</member>

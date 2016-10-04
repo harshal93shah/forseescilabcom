@@ -43,6 +43,22 @@
 </refsection>
 
 <refsection>
+   <title>Description</title>
+   <para>
+The MultiplexedDeinterleaver object restores the original ordering of a sequence that was interleaved using the General Multiplexed Interleave
+</para>
+</refsection>
+
+<refsection>
+   <title>Examples</title>
+   <programlisting role="example"><![CDATA[
+y=MultiplexedDeinterleaver([0 0 0 0 0 3 0 2],[1 4 2],0,2)
+y  =
+0.    0.    0.    0.    0.    0.    0.    0.
+   ]]></programlisting>
+</refsection>
+
+<refsection>
    <title>Authors</title>
    <simplelist type="vert">
    <member>Harshal Shah</member>

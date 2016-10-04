@@ -17,7 +17,7 @@
 
   <refnamediv>
     <refname>RaisedCosinetxfilter</refname>
-    <refpurpose>this fn apply pulse shaping by upsampling signal using raised cosine filter</refpurpose>
+    <refpurpose>this fn apply pulse shaping by interpolating signal using raised cosine filter</refpurpose>
   </refnamediv>
 
 
@@ -46,6 +46,18 @@
    <varlistentry><term>gain:</term>
       <listitem><para>Linear filter gain-Specify the linear gain of the filter as a positive numeric scalar. The default is 1.he object designs a raised cosine filter that has unit energy, and then applies the linear gain to obtain final tap values.</para></listitem></varlistentry>
    </variablelist>
+</refsection>
+
+<refsection>
+   <title>Examples</title>
+   <programlisting role="example"><![CDATA[
+[y] = RaisedCosinetxfilter([1 2 3 4 5 6],0.5,2,2)
+y  =
+column 1 to 6
+- 0.0753273    0.4107961    0.6562808    1.2323884    1.3125615    2.0539806
+column  7 to 12
+1.9688423    2.8755729    2.625123    3.6971651    3.2814038    4.5187574
+   ]]></programlisting>
 </refsection>
 
 <refsection>

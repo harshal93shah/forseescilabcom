@@ -43,6 +43,15 @@
 </refsection>
 
 <refsection>
+   <title>Examples</title>
+   <programlisting role="example"><![CDATA[
+y=Scrambler(6,[1 2 4 3 5],[1 0 1 1],[2 0 1])
+y  =
+2.    4.    2.    3.    5.
+   ]]></programlisting>
+</refsection>
+
+<refsection>
    <title>Authors</title>
    <simplelist type="vert">
    <member>Harshal Shah</member>

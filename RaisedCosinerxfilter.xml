@@ -55,6 +55,15 @@
 </refsection>
 
 <refsection>
+   <title>Examples</title>
+   <programlisting role="example"><![CDATA[
+[y] = RaisedCosinerxfilter([1 2 3 4 5 6],0.5,2,2)
+y  =
+- 0.0753273    1.4025457    4.433619
+   ]]></programlisting>
+</refsection>
+
+<refsection>
    <title>Authors</title>
    <simplelist type="vert">
    <member>Harshal Shah</member>

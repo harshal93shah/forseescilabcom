@@ -45,6 +45,22 @@
 </refsection>
 
 <refsection>
+   <title>Description</title>
+   <para>
+The Convolutional Interleaver block permutes the symbols in the input signal. Internally, it uses a set of shift registers. The delay value of the kth shift register is (k-1) times the Register length step parameter. The number of shift registers is the value of the Rows of shift registers parameter.
+</para>
+</refsection>
+
+<refsection>
+   <title>Examples</title>
+   <programlisting role="example"><![CDATA[
+y=ConvolutionalInterleaver([1 2 3 4 5 6],4,2,0,1)
+y  =
+1.    0.    0.    0.    5.    0.
+   ]]></programlisting>
+</refsection>
+
+<refsection>
    <title>Authors</title>
    <simplelist type="vert">
    <member>Harshal Shah</member>

@@ -41,6 +41,26 @@
 </refsection>
 
 <refsection>
+   <title>Description</title>
+   <para>
+The comm.MER (modulation error ratio) object measures the signal-to-noise ratio (SNR) in digital modulation applications. You can use MER measurements to determine system performance in communications applications. For example, determining whether a DVB-T system conforms to applicable radio transmission standards requires accurate MER measurements.
+</para>
+</refsection>
+
+<refsection>
+   <title>Examples</title>
+   <programlisting role="example"><![CDATA[
+[avgMER,minMER,perMER] = MER([1 3 5 6 7],[3 3.3 4 3 6],80)
+perMER  =
+6.0686484
+minMER  =
+2.5468232
+avgMER  =
+7.292056
+   ]]></programlisting>
+</refsection>
+
+<refsection>
    <title>Authors</title>
    <simplelist type="vert">
    <member>Harshal Shah</member>

@@ -43,6 +43,18 @@
 </refsection>
 
 <refsection>
+   <title>Examples</title>
+   <programlisting role="example"><![CDATA[
+y=CRCGenerator([1 0 1 1 0 1 0 0 1],[1 0 1 1],[ 0 1 0],3)
+y  =
+column  1 to 14
+1.    0.    1.    1.    1.    0.    1.    0.    1.    1.    1.    0.    0.    0.
+column 15 to 18
+1.    1.    1.    1.
+   ]]></programlisting>
+</refsection>
+
+<refsection>
    <title>Authors</title>
    <simplelist type="vert">
    <member>Harshal shah</member>

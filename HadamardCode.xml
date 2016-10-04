@@ -41,6 +41,22 @@
 </refsection>
 
 <refsection>
+   <title>Description</title>
+   <para>
+The HadamardCode object generates a Hadamard code from a Hadamard matrix, whose rows form an orthogonal set of codes. You can use orthogonal codes for spreading in communication systems in which the receiver is perfectly synchronized with the transmitter. In these systems, the despreading operation is ideal, because the codes decorrelate completely.
+</para>
+</refsection>
+
+<refsection>
+   <title>Examples</title>
+   <programlisting role="example"><![CDATA[
+y=HadamardCode(4,2,3)
+y  =
+1.    1.  - 1.
+   ]]></programlisting>
+</refsection>
+
+<refsection>
    <title>Authors</title>
    <simplelist type="vert">
    <member>Harshal Shah</member>

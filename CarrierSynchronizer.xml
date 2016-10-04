@@ -47,6 +47,27 @@
 </refsection>
 
 <refsection>
+   <title>Description</title>
+   <para>
+The Carrier Synchronizer block compensates for carrier frequency and phase offsets using a closed-loop approach for BPSK, QPSK, 8-PSK, QAM, and PAM modulation schemes. The block accepts a single input port. To obtain an estimate of the phase error in radians, select the Estimated phase error output port check box. The block accepts a sample- or frame-based complex input signal and returns a complex output signal and a an real phase estimate.
+</para>
+</refsection>
+
+<refsection>
+   <title>Examples</title>
+   <programlisting role="example"><![CDATA[
+[y,p] = CarrierSynchronizer([1 2 3 4 5],'QAM',3,2,1,0.5)
+p  =
+0.  - 0.4214261  - 1.3846856  - 3.0101861  - 5.418335
+y =
+column 1 to 4
+1.    1.825013 - 0.8181243i    0.5551145 - 2.948194i  - 3.9655143 - 0.5241147i
+column 5
+3.2437703 + 3.8049907i
+   ]]></programlisting>
+</refsection>
+
+<refsection>
    <title>Authors</title>
    <simplelist type="vert">
    <member>Harshal Shah</member>

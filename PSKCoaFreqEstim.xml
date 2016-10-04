@@ -46,6 +46,15 @@
 </refsection>
 
 <refsection>
+   <title>Examples</title>
+   <programlisting role="example"><![CDATA[
+y=PSKCoaFreqEstim([1 2 3 4],8,'fft',4000,1000)
+y  =
+125.
+   ]]></programlisting>
+</refsection>
+
+<refsection>
    <title>Authors</title>
    <simplelist type="vert">
    <member>Harshal Shah</member>

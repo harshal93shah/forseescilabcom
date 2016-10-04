@@ -39,6 +39,28 @@
 </refsection>
 
 <refsection>
+   <title>Description</title>
+   <para>
+</para>
+</refsection>
+
+<refsection>
+   <title>Description</title>
+   <para>
+The DifferentialEncoder encodes the binary input signal within a channel. The output is the logical difference between the current input element and the previous output element.
+</para>
+</refsection>
+
+<refsection>
+   <title>Examples</title>
+   <programlisting role="example"><![CDATA[
+y=DifferentialEncoder([1 0 0 1 1 1 0],0)
+y  =
+1.    1.    0.    1.    0.    0.    1.
+   ]]></programlisting>
+</refsection>
+
+<refsection>
    <title>Authors</title>
    <simplelist type="vert">
    <member>Harshal Shah</member>

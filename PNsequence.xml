@@ -43,6 +43,22 @@
 </refsection>
 
 <refsection>
+   <title>Description</title>
+   <para>
+The PNSequence object generates a sequence of pseudorandom binary numbers using a linear-feedback shift register (LFSR). This block implements LFSR using a simple shift register generator (SSRG, or Fibonacci) configuration. You can use a pseudonoise sequence in a pseudorandom scrambler and descrambler. You can also use one in a direct-sequence spread-spectrum system.
+</para>
+</refsection>
+
+<refsection>
+   <title>Examples</title>
+   <programlisting role="example"><![CDATA[
+y=PNsequence([1 0 1 1],[1 0 1],[ 0 0 1],3)
+y  =
+1.    0.    1.
+   ]]></programlisting>
+</refsection>
+
+<refsection>
    <title>Authors</title>
    <simplelist type="vert">
    <member>Harshal Shah</member>

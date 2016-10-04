@@ -47,6 +47,22 @@
 </refsection>
 
 <refsection>
+   <title>Description</title>
+   <para>
+The Discrete-Time VCO (voltage-controlled oscillator)  generates a signal whose frequency shift from the Quiescent frequency parameter is proportional to the input signal. The input signal is interpreted as a voltage.
+</para>
+</refsection>
+
+<refsection>
+   <title>Examples</title>
+   <programlisting role="example"><![CDATA[
+y=DiscretetimeVCO([1 3 4 2 5],2,3000,0.1,0,0.0001)
+y  =
+1.618034  - 0.6180340  - 1.618034    1.618034  - 0.6180340
+   ]]></programlisting>
+</refsection>
+
+<refsection>
    <title>Authors</title>
    <simplelist type="vert">
    <member>Harshal Shah</member>

@@ -17,7 +17,7 @@
 
   <refnamediv>
     <refname>Descrambler</refname>
-    <refpurpose>This function scrambles a scalar or column vector input signal.</refpurpose>
+    <refpurpose>This function Descrambles a scalar or column vector input signal.</refpurpose>
   </refnamediv>
 
 
@@ -38,8 +38,17 @@
    <varlistentry><term>polynomial :</term>
       <listitem><para> Generator polynomial.Specify the generator polynomial as a binary  vector, that lists the coefficients of the polynomial in order of ascending powers of z–1 eg. specify 1 + z^(-6) + Z^(-7) as [1 0 0 0 0 0 1 1]</para></listitem></varlistentry>
    <varlistentry><term>Initialstate :</term>
-      <listitem><para> Vector array (with length of the generator polynomial order) of initial shift register values  vector with values in [0 CalculationBase–1</para></listitem></varlistentry>
+      <listitem><para> Vector array (with length of the generator polynomial order) of initial shift register values  vector with values in [0 CalculationBase–1]</para></listitem></varlistentry>
    </variablelist>
+</refsection>
+
+<refsection>
+   <title>Examples</title>
+   <programlisting role="example"><![CDATA[
+y=Descrambler(6,[2 4 3 3 5],[1 0 1 1],[2 0 1])
+y  =
+1.    2.    4.    3.    5.
+   ]]></programlisting>
 </refsection>
 
 <refsection>

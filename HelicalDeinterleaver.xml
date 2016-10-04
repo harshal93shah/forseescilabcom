@@ -49,6 +49,23 @@
 </refsection>
 
 <refsection>
+   <title>Description</title>
+   <para>
+The Helical Deinterleaver block permutes the symbols in the input signal by placing them in an array row by row and then selecting groups in a helical fashion to send to the output port.
+The block uses the array internally for its computations. If C is the Number of columns in helical array parameter, then the array has C columns and unlimited rows. If N is the Group size parameter, then the block accepts an input of length C·N at each time step and inserts them into the next N rows of the array. The block also places the Initial condition parameter into certain positions in the top few rows of the array (not only to accommodate the helical pattern but also to preserve the vector indices of symbols that pass through the Helical Interleaver and Helical Deinterleaver blocks in turn).
+The output consists of consecutive groups of N symbols. Counting from the beginning of the simulation, the block selects the kth output group in the array from column k mod C. The selection is helical because of the reduction modulo C and because the first symbol in the kth group is in row 1+(k-1)*s, where s is the Helical array step size parameter.
+This block accepts a column vector input signal containing C·N elements.
+</para>
+</refsection>
+
+<refsection>
+   <title>Examples</title>
+   <programlisting role="example"><![CDATA[
+y = HelicalDeinterleaver([1 0 0 2 3 0],3,2,1,0)
+   ]]></programlisting>
+</refsection>
+
+<refsection>
    <title>Authors</title>
    <simplelist type="vert">
    <member>Harshal Shah</member>

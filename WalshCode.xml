@@ -41,6 +41,22 @@
 </refsection>
 
 <refsection>
+   <title>Description</title>
+   <para>
+The WalshCode object generates a Walsh code from an orthogonal set of codes.
+</para>
+</refsection>
+
+<refsection>
+   <title>Examples</title>
+   <programlisting role="example"><![CDATA[
+y=WalshCode(8,2,3)
+y  =
+1.    1.  - 1.
+   ]]></programlisting>
+</refsection>
+
+<refsection>
    <title>Authors</title>
    <simplelist type="vert">
    <member>Harshal Shah</member>

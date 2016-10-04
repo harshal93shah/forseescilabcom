@@ -51,7 +51,29 @@
    <title>Description</title>
    <para>
 The algebraic deinterleaver performs all computations in modulo N, where N is the length
+The Algebraic Interleaver block rearranges the elements of its input vector using a permutation that is algebraically derived. The Number of elements parameter, N, indicates how many numbers are in the input vector. This block accepts a column vector input signal.
+The block accepts the following data types: int8, uint8, int16, uint16, int32, uint32, boolean, single, double, and fixed-point. The output signal inherits its data type from the input signal.
+The Type parameter indicates the algebraic method that the block uses to generate the appropriate permutation table. Choices are Takeshita-Costello and Welch-Costas. Each of these methods has parameters and restrictions that are specific to it:
+If you set Type to Welch-Costas, then N + 1 must be prime. The Primitive element parameter is an integer, A, between 1 and N that represents a primitive element of the finite field GF(N + 1). This means that every nonzero element of GF(N + 1) can be expressed as A raised to some integer power.
+In a Welch-Costas interleaver, the permutation maps the integer k to mod(Ak,N + 1) - 1.
+If you set Type to Takeshita-Costello, then N must be 2m for some integer m. The Multiplicative factor parameter, k, must be an odd integer less than N. The Cyclic shift parameter, h, must be a nonnegative integer less than N.
+A Takeshita-Costello interleaver uses a length-N cycle vector whose nth element is
+c(n)=mod(k⋅n⋅(n−1)/2,N)+1, n
+for integers n between 1 and N. The intermediate permutation function is obtained by using the following relationship:
+Π(c(n))=c(n+1)
+where
+n=1:N
+The interleaver's actual permutation vector is the result of cyclically shifting the elements of the permutation vector, π, by the Cyclic shift parameter, h.
 </para>
+</refsection>
+
+<refsection>
+   <title>Examples</title>
+   <programlisting role="example"><![CDATA[
+y=AlgebraicInterleaver([1 2 3 4 5 6 ].','weco',6,3)
+y  =
+1.    3.    2.    6.    4.    5.
+   ]]></programlisting>
 </refsection>
 
 <refsection>

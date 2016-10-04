@@ -41,6 +41,15 @@
 </refsection>
 
 <refsection>
+   <title>Examples</title>
+   <programlisting role="example"><![CDATA[
+=QAMCoaFreqEstim([1 2 3 4],4000,1000)
+Y  =
+250.
+   ]]></programlisting>
+</refsection>
+
+<refsection>
    <title>Authors</title>
    <simplelist type="vert">
    <member>Harshal Shah</member>
