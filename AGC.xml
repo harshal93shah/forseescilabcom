@@ -33,15 +33,47 @@
    <variablelist>
    <varlistentry><term>x:</term>
       <listitem><para>Input-Input vector signal</para></listitem></varlistentry>
-   <varlistentry><term>k:</term>
-      <listitem><para>AdaptationStepSize-Step size for gain updates.Specify the step size as a real positive scalar.</para></listitem></varlistentry>
-   <varlistentry><term>A:</term>
-      <listitem><para>DesiredOutputPower-Target output power level.Specify the desired output power level as a real positive scalar.</para></listitem></varlistentry>
-   <varlistentry><term>N:</term>
-      <listitem><para>AveragingLength-Length of the averaging window.Specify the length of the averaging window in samples as a positive integer scalar.</para></listitem></varlistentry>
-   <varlistentry><term>maxpow:</term>
-      <listitem><para>MaxPowerGain-Maximum power gain in decibels.Specify the maximum gain of the AGC in decibels as a positive scalar.</para></listitem></varlistentry>
    </variablelist>
+</refsection>
+
+<refsection>
+   <title>Description</title>
+   <para>
+This function that adaptively adjusts its gain  depending on the input signal to achieve a constant signal level at the output
+k:AdaptationStepSize-Step size for gain updates.Specify the step size as a real positive scalar.
+A:DesiredOutputPower-Target output power level.Specify the desired output power level as a real positive scalar.
+N:AveragingLength-Length of the averaging window.Specify the length of the averaging window in samples as a positive integer scalar.
+maxpow:MaxPowerGain-Maximum power gain in decibels.Specify the maximum gain of the AGC in decibels as a positive scalar.
+</para>
+</refsection>
+
+<refsection>
+   <title>Examples</title>
+   <programlisting role="example"><![CDATA[
+x=rand(1,20);
+y=AGC(x,3,2,4,10);
+y  =
+0.2113249
+2.3908206
+0.0000118
+1.044586
+0.1688867
+1.9871493
+0.5328579
+2.1684719
+0.0995673
+0.2162177
+0.3570745
+2.0945565
+0.6208185
+0.6277576
+0.2994738
+0.7338849
+0.7311936
+0.6845169
+2.7935206
+0.0652712
+   ]]></programlisting>
 </refsection>
 
 <refsection>
